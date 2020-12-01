@@ -1,10 +1,23 @@
 {
   "name": "soma-electron",
   "version": "0.1.0",
-  "main": "public/electron.js",
+  "description" : "A simple spreadsheet with Electron and React",
   "author": "will",
+  "main": "public/electron.js",
   "build":{
-    "appId":"soma.electron"
+    "appId":"soma.electron",
+    "icon":"icon.png",
+    "mac":{
+      "category":"public.app-category.office",
+      "icon":"icon.png"
+    },
+    
+    "linux":{
+      "category":"office",
+      "target":[
+        "AppImage"
+      ]
+    }
   },
   "homepage": "./",
   "dependencies": {
