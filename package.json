@@ -5,6 +5,7 @@
   "author": "will",
   "build": {
     "appId": "soma.electron"
+  "main": "public/electron.js",
   },
   "homepage": "./",
   "dependencies": {
