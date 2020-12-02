@@ -1,13 +1,23 @@
 {
   "name": "soma-electron",
   "version": "0.1.0",
-  "description" : "A simple spreadsheet with Electron and React",
+  "description": "A simple spreadsheet with Electron and React",
   "author": "will",
   "build": {
-    "appId": "soma.electron"
+    "appId": "soma.electron",
+    "win": {
+      "icon": "build/icon.png"
+    },
+    "linux": {
+      "icon": "build/icon.png",
+      "target": "AppImage"
+    }
   },
   "homepage": "./",
+  "main": "public/electron.js",
   "dependencies": {
+    "@material-ui/core": "^4.11.1",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -15,6 +25,7 @@
     "electron-is-dev": "^1.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
@@ -26,12 +37,6 @@
     "electron-build": "electron-builder",
     "build": "npm run react-build && npm run electron-build",
     "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
-  },
-  "eslintConfig": 
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
